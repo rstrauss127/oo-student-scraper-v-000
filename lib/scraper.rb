@@ -60,7 +60,7 @@ students
 
     doc.css(".social-icon-container a").map do |link|
       if !(link['href'].include?("github")) &&
-        !(link['href'].include?("linkedin")) && 
+        !(link['href'].include?("linkedin")) &&
         !(link['href'].include?("twitter"))
         blog = link['href']
       end
