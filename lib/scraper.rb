@@ -71,7 +71,7 @@ students
     bio = doc.css(".description-holder p").text
 
 
-    profile = {:twitter twitter, :linkedin=> linkedin, :github=> github,:blog=> blog, :quote=> quote, :bio=> bio}
+    profile = {twitter: twitter, :linkedin=> linkedin, :github=> github,:blog=> blog, :quote=> quote, :bio=> bio}
     profile.delete_if {|key, value| value == [] || value == nil}
     profile
 
