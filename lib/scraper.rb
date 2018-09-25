@@ -45,7 +45,7 @@ students
         twitter << link['href']
       end
     end
-
+binding.pry
     quote = doc.css(".profile-quote").text
     bio = doc.css(".description-holder p").text
     binding.pry
