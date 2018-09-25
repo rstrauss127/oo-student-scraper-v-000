@@ -52,6 +52,13 @@ students
       end
     end
 
+    doc.css(".social-icon-container a").map do |link|
+      if link['href'].include?("github")
+        github << link['href']
+      end
+    end
+
+
 binding.pry
     quote = doc.css(".profile-quote").text
     bio = doc.css(".description-holder p").text
