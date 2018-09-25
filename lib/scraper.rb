@@ -40,7 +40,7 @@ students
     blog = []
 
 
-    doc.css(".social-icon-container").map do |link|
+    doc.css(".social-icon-container a").map do |link|
       if link['href'].include?("twitter")
         twitter << link['href']
       end
