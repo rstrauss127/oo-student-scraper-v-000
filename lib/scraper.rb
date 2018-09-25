@@ -11,7 +11,8 @@ class Scraper
 
 
     roster =  doc.css(".card-text-container")
-    x = roster.collect {|name| name.css("h4").text}
+    names = roster.collect {|name| name.css("h4").text}
+    locations = roster.collect {|location| location.css("p").text}
 
 
 
