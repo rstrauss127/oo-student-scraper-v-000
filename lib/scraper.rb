@@ -13,8 +13,9 @@ class Scraper
     roster =  doc.css(".card-text-container")
     names = roster.collect {|name| name.css("h4").text}
     locations = roster.collect {|location| location.css("p").text}
-    profiles = doc.css(".student-card a")
-    urls = profiles.collect {|url| url.css("a href").text}
+
+    links = doc.css('.student-card a')
+
 
 
 
