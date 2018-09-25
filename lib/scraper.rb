@@ -74,7 +74,7 @@ students
     if twitter != []
       profile.push(twitter)
     end
-
+binding.pry
   end
 
 end
