@@ -24,7 +24,7 @@ class Scraper
       hash = {:name=> names[i], :location=> locations[i], :profile_url=> urls[i]}
       students.push[hash]
       i = i + 1
-      
+
     end
 
 
