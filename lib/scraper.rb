@@ -29,10 +29,23 @@ students
   end
 
   def self.scrape_profile_page(profile_url)
-    hash = {}
+
     html = open(profile_url)
     doc = Nokogiri::HTML(html)
-    links = doc.css(".social-icon-container a")
+
+    twitter = []
+    linkedin = []
+    github = []
+    youtube = []
+    blog = []
+
+
+    doc.css(".social-icon-container").map do |link|
+      if link['href'].include?("twitter")
+        twitter << link['href']
+      end
+    end
+
     quote = doc.css(".profile-quote").text
     bio = doc.css(".description-holder p").text
     binding.pry
