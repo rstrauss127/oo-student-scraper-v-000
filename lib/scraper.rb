@@ -22,7 +22,7 @@ class Scraper
     i = 0
     while i < 110
       hash = {:name=> names[i], :location=> locations[i], :profile_url=> urls[i]}
-      students << hash
+      students.push(hash)
       i = 1 + i
     end
 students
