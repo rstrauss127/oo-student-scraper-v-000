@@ -11,7 +11,7 @@ class Scraper
 
 
     roster =  doc.css(".card-text-container")
-  
+
 
 
     binding.pry
