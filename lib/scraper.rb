@@ -18,18 +18,15 @@ class Scraper
 
     urls = links.collect {|url| url['href']}
     array = [[names], [locations], [urls]]
-    binding.pry
+
     i = 0
     while i < 110
       hash = {:name=> names[i], :location=> locations[i], :profile_url=> urls[i]}
       students << hash
       i = 1 + i
-
     end
 
-
-students
-
+binding.pry
   end
 
   def self.scrape_profile_page(profile_url)
