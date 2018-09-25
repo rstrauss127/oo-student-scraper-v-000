@@ -17,7 +17,7 @@ class Scraper
     links = doc.css('.student-card a')
 
     urls = links.collect {|url| url['href']}
-    array = [[names], [locations], urls]
+    array = [[names], [locations], [urls]]
 binding.pry
 
 
