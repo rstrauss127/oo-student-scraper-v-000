@@ -58,6 +58,13 @@ students
       end
     end
 
+    doc.css(".social-icon-container a").map do |link|
+      if !(link['href'].include?("github")) &&
+        !(link['href'].include?("linkedin")) && 
+        !(link['href'].include?("twitter"))
+        blog = link['href']
+      end
+    end
 
 binding.pry
     quote = doc.css(".profile-quote").text
