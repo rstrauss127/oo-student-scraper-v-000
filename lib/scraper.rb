@@ -34,6 +34,7 @@ students
     links = doc.css(".social-icon-container a")['href']
     quote = doc.css(".profile-quote").text
     bio = doc.css(".description-holder p").text
+    binding.pry
 
   end
 
