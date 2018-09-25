@@ -5,6 +5,9 @@ class Student
   @@all = []
 
   def initialize(student_hash)
+    student_hash.each do |key, value|
+      @key = value
+    end
     binding.pry
 
   end
