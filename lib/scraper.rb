@@ -15,9 +15,7 @@ class Scraper
     locations = roster.collect {|location| location.css("p").text}
 
     links = doc.css('.student-card a')
-    urls = links.collect {|url| links[url]["href"]}
-
-
+    urls = links.collect {|url| url.css["href"]}
 
     binding.pry
 
