@@ -74,7 +74,7 @@ students
     profile = {:twitter=> twitter, :linkedin=> linkedin, :github=> github,:blog=> blog, :quote=> quote, :bio=> bio}
     profile.delete_if {|key, value| value == [] || value == nil}
     profile
-binding.pry
+
   end
 
 end
