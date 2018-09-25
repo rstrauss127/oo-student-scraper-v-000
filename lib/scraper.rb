@@ -70,10 +70,10 @@ students
     quote = doc.css(".profile-quote").text
     bio = doc.css(".description-holder p").text
 
-    profile = {}
-    if twitter != []
-      profile.push(twitter)
-    end
+
+    profile = {:twitter=> twitter, :linkedin=> linkedin, :github=> github,:blog=> blog, :profile-quote=> quote, :bio=> bio}
+    profile.delete_if {|key, value| value == [] || value == nil}
+    profile
 binding.pry
   end
 
