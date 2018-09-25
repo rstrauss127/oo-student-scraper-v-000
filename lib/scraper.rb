@@ -8,7 +8,7 @@ class Scraper
   def self.scrape_index_page(index_url)
     html = open(index_url)
     doc = Nokogiri::HTML(html)
-
+    students = []
 
     roster =  doc.css(".card-text-container")
     names = roster.collect {|name| name.css("h4").text}
@@ -18,6 +18,13 @@ class Scraper
 
     urls = links.collect {|url| url['href']}
     array = [[names], [locations], [urls]]
+    i = 0
+    while i < 110
+      hash = {:name=> names[i], :location=> locations[i], :profile_url=> urls[i]}
+      students.push[hash]
+      i+=1
+    end
+
 binding.pry
 
 
