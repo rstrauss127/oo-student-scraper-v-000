@@ -10,7 +10,8 @@ class Scraper
     doc = Nokogiri::HTML(html)
 
 
-    roster =  doc.css(".student-card").text
+    roster =  doc.css(".card-text-container").text
+  
 
 
     binding.pry
