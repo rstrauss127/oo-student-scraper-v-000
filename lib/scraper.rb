@@ -29,9 +29,10 @@ students
   end
 
   def self.scrape_profile_page(profile_url)
+    hash = {:}
     html = open(profile_url)
     doc = Nokogiri::HTML(html)
-  #  links = doc.css(".social-icon-container a")['href']
+    links = doc.css(".social-icon-container a")
     quote = doc.css(".profile-quote").text
     bio = doc.css(".description-holder p").text
     binding.pry
