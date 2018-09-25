@@ -42,19 +42,19 @@ students
 
     doc.css(".social-icon-container a").map do |link|
       if link['href'].include?("twitter")
-        twitter << link['href']
+        twitter = link['href']
       end
     end
 
     doc.css(".social-icon-container a").map do |link|
       if link['href'].include?("linkedin")
-        linkedin << link['href']
+        linkedin = link['href']
       end
     end
 
     doc.css(".social-icon-container a").map do |link|
       if link['href'].include?("github")
-        github << link['href']
+        github = link['href']
       end
     end
 
